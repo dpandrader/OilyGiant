@@ -1,11 +1,22 @@
-Aprendizaje Automático.
+🛢️ Proyecto – Predicción de Reservas y Selección de Pozos Petrolíferos en OilyGiant
 
-Trabajas en la compañía de extracción de petróleo OilyGiant. Tu tarea es encontrar los mejores lugares donde abrir 200 pozos nuevos de petróleo.
+Objetivo del proyecto:
+Desarrollar un modelo de machine learning para predecir el volumen de reservas de pozos petrolíferos en tres regiones y seleccionar los 200 pozos más prometedores. Posteriormente, identificar la región con el mayor beneficio esperado, evaluando riesgos mediante la técnica de bootstrapping.
 
-Para completar esta tarea, tendrás que realizar los siguientes pasos:
+Procedimientos:
 
-Leer los archivos con los parámetros recogidos de pozos petrolíferos en la región seleccionada: calidad de crudo y volumen de reservas.
-Crear un modelo para predecir el volumen de reservas en pozos nuevos.
-Elegir los pozos petrolíferos que tienen los valores estimados más altos.
-Elegir la región con el beneficio total más alto para los pozos petrolíferos seleccionados.
-Tienes datos sobre muestras de crudo de tres regiones. Ya se conocen los parámetros de cada pozo petrolero de la región. Crea un modelo que ayude a elegir la región con el mayor margen de beneficio. Analiza los beneficios y riesgos potenciales utilizando la técnica bootstrapping.
+Exploración y preparación de datos de tres regiones (volumen de reservas y características geológicas).
+Entrenamiento de modelos de regresión lineal para cada región, con división de datos en entrenamiento y validación.
+Evaluación de los modelos usando RMSE y análisis de volumen promedio predicho.
+Cálculo de beneficios esperados considerando:
+Inversión fija de $100 millones en 200 pozos.
+Precio del barril: $4.5 (equivalente a $4500 por mil unidades).
+Umbral mínimo de rentabilidad: 111.1 mil barriles por pozo.
+Selección de los 200 pozos con mayor volumen predicho en cada región.
+Análisis de riesgos mediante bootstrapping (1000 muestras) para calcular intervalo de confianza del 95% y riesgo de pérdidas.
+
+Conclusiones:
+
+Se identificaron diferencias significativas en la rentabilidad de las regiones, siendo una de ellas claramente más prometedora.
+El riesgo de pérdidas en la región seleccionada resultó menor al 2.5%, cumpliendo con los criterios de negocio.
+El proyecto integró técnicas de regresión lineal y análisis estadístico avanzado con Python, pandas, scikit-learn, matplotlib y numpy.
